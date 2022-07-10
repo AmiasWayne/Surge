@@ -13,9 +13,8 @@ let icon_s = mitm_status.enabled&&rewrite_status.enabled&&scripting_status.enabl
 //点击按钮，重载配置（同时刷新dns）
 if ($trigger == "button") {
 	await httpAPI("/v1/profiles/reload");
-        $notification.post("配置重载","配置重载成功","")
+	$notification.post("配置重载","配置重载成功","")
 };
-
 $done({
     title:"𝗦𝗨𝗥𝗚𝗘ᴾᴿᴼ🧚‍♀️  已运行"+startTime,
     content:"Mitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
