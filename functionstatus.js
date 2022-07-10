@@ -16,7 +16,7 @@ if ($trigger == "button") {
 	$notification.post("配置重载","配置重载成功","")
 };
 $done({
-    title:"𝗦𝗨𝗥𝗚𝗘ᴾᴿᴼ🧚‍♀️  2023-02-22
+    title:"𝗦𝗨𝗥𝗚𝗘ᴾᴿᴼ🧚‍♀️ 2023-02-22/n
     已运行"+startTime,
     content:"Mitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
     icon: icon_s?"checkmark.seal":"exclamationmark.triangle",
