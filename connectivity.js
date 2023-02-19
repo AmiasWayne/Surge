@@ -148,7 +148,7 @@ async function test_github() {
     })
   }
 
-  github_test_result =  'Github'+'：'
+  github_test_result =  'Github'+':'
   await inner_check()
     .then((code) => {
       github_Delay = github_endTime-github_startTime + ""
