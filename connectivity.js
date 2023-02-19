@@ -1,4 +1,5 @@
-/* 加入了百度和bili测速,感谢@yibeizipeini原脚本来自于https://raw.githubusercontent.com/yibeizipeini/JavaScript/Surge/ConnectivityTest.js*/
+
+// 由本群key修改提供。
 const REQUEST_HEADERS = {
   'User-Agent':
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36',
@@ -9,7 +10,7 @@ const REQUEST_HEADERS = {
   let panel_result = {
     title: 'Network Connectivity Test',
     content: '',
-    icon: 'timer',
+    icon: 'wifi.circle',
     'icon-color': '#FF5A9AF9',
   }
 
@@ -38,7 +39,7 @@ async function test_baidu() {
     })
   }
 
-  baidu_test_result =  'Baidu' + '\xa0\xa0\xa0\xa0\xa0\xa0' + ': '
+  baidu_test_result =  'Baidu' + ': '
   await inner_check()
     .then((code) => {
       baidu_Delay = baidu_endTime-baidu_startTime + ""
@@ -65,7 +66,7 @@ async function test_bilibili() {
     })
   }
 
-  bilibili_test_result =  'Bilibili' + '\xa0\xa0\xa0\xa0\xa0\xa0' + ': '
+  bilibili_test_result =  'Bilibili' + ': '
   await inner_check()
     .then((code) => {
       bilibili_Delay = bilibili_endTime-bilibili_startTime + ""
@@ -89,10 +90,10 @@ async function test_youtube() {
         youtube_endTime = Date.now()
         resolve('1')
       })
-    }
+    })
   }
 
-  youtube_test_result =  'YouTube' + '\xa0\xa0' + ': '
+  youtube_test_result =  'Youtube' + ': '
   await inner_check()
     .then((code) => {
       youtube_Delay = youtube_endTime-youtube_startTime + ""
@@ -120,7 +121,7 @@ async function test_google() {
     })
   }
 
-  google_test_result =  'Google' + '\xa0\xa0\xa0\xa0' + ': '
+  google_test_result =  'Google' + ': '
   await inner_check()
     .then((code) => {
       google_Delay = google_endTime-google_startTime + ""
@@ -147,7 +148,7 @@ async function test_github() {
     })
   }
 
-  github_test_result =  'Github' + '\xa0\xa0\xa0\xa0\xa0' + ': '
+  github_test_result =  'Github' + ': '
   await inner_check()
     .then((code) => {
       github_Delay = github_endTime-github_startTime + ""
