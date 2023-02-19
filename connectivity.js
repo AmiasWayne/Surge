@@ -38,7 +38,7 @@ async function test_baidu() {
     })
   }
 
-  baidu_test_result =  'Baidu' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + ': '
+  baidu_test_result =  'Baidu' + '\xa0\xa0\xa0\xa0\xa0\xa0' + ' : '
   await inner_check()
     .then((code) => {
       baidu_Delay = baidu_endTime-baidu_startTime + ""
@@ -65,7 +65,7 @@ async function test_bilibili() {
     })
   }
 
-  bilibili_test_result =  'Bilibili' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + ': '
+  bilibili_test_result =  'Bilibili' + '\xa0\xa0\xa0\xa0\xa0\xa0' + ' : '
   await inner_check()
     .then((code) => {
       bilibili_Delay = bilibili_endTime-bilibili_startTime + ""
