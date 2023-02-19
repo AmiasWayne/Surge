@@ -39,7 +39,7 @@ async function test_baidu() {
     })
   }
 
-  baidu_test_result =  'Baidu'+'   :'
+  baidu_test_result =  'Baidu'+'🔜'
   await inner_check()
     .then((code) => {
       baidu_Delay = baidu_endTime-baidu_startTime + ""
@@ -66,7 +66,7 @@ async function test_bilibili() {
     })
   }
 
-  bilibili_test_result =  'Bilibili'+':'
+  bilibili_test_result =  'Bilibili'+'🔜'
   await inner_check()
     .then((code) => {
       bilibili_Delay = bilibili_endTime-bilibili_startTime + ""
@@ -93,7 +93,7 @@ async function test_youtube() {
     })
   }
 
-  youtube_test_result =  'Youtube'+'  :'
+  youtube_test_result =  'Youtube'+'🔜'
   await inner_check()
     .then((code) => {
       youtube_Delay = youtube_endTime-youtube_startTime + ""
@@ -121,7 +121,7 @@ async function test_google() {
     })
   }
 
-  google_test_result =  'Google'+'  :'
+  google_test_result =  'Google'+'🔜'
   await inner_check()
     .then((code) => {
       google_Delay = google_endTime-google_startTime + ""
@@ -148,7 +148,7 @@ async function test_github() {
     })
   }
 
-  github_test_result =  'Github'+'  :'
+  github_test_result =  'Github'+'🔜'
   await inner_check()
     .then((code) => {
       github_Delay = github_endTime-github_startTime + ""
