@@ -1,7 +1,7 @@
 let $ = {
 Bilibili:'https://www.bilibili.com',
 Baidu:'https://www.baidu.com',
-Twitter:'https://www.twitter.com/',
+Twitter:'https://www.twitter.com',
 Google:'https://www.google.com/generate_204',
 Github:'https://www.github.com'
 }
