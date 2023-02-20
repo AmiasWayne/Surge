@@ -9,7 +9,7 @@ const REQUEST_HEADERS = {
     title: '连通测试',
     content: '',
     icon: 'touchid',
-    'icon-color': '#ECA42D',
+    'icon-color': '#FF5A9AF9',
   }
 
   await Promise.all([test_Huawei(), test_youtube(), test_github(), test_twitch(), test_twitter()])
