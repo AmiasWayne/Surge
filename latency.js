@@ -135,7 +135,7 @@ async function test_chatgpt() {
   let inner_check = () => {
     return new Promise((resolve) => {
       let option = {
-        url: 'https://www.openai.com',
+        url: 'https://openai.com',
         headers: REQUEST_HEADERS,
       }
       chatgpt_startTime = Date.now()
