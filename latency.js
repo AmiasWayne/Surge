@@ -97,7 +97,7 @@ async function test_github() {
     .then((code) => {
       github_Delay = github_endTime-github_startTime + ""
       if (code === '1') {
-        github_test_result += github_Delay + 'ms' +'\xa0\xa0\t'
+        github_test_result += github_Delay + 'ms' +'\xa0\xa0\t: '
       }
     })
   
@@ -108,7 +108,7 @@ async function test_twitch() {
   let inner_check = () => {
     return new Promise((resolve) => {
       let option = {
-        url: 'https://www.twitch.com',
+        url: 'https://www.twitch.tv',
         headers: REQUEST_HEADERS,
       }
       twitch_startTime = Date.now()
