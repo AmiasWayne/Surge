@@ -119,7 +119,7 @@ async function test_chatgpt() {
     })
   }
 
-  chatgpt_test_result =  'CHATGPT'+':'
+  chatgpt_test_result =  'CHATGPT🤖🤖🤖'+':'
   await inner_check()
     .then((code) => {
       chatgpt_Delay = chatgpt_endTime-chatgpt_startTime + ""
