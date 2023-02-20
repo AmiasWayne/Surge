@@ -1,13 +1,13 @@
 let $ = {
 Bilibili:'https://www.bilibili.com',
 Baidu:'https://www.baidu.com',
-Facebook:'https://www.facebook.com',
+Twitter:'https://www.twitter.com',
 Google:'https://www.google.com/generate_204',
 Github:'https://www.github.com'
 }
 
 !(async () => {
-await Promise.all([http('Baidu'),http('Bilibili'),http('Facebook'),http('Github'),http('Google')]).then((x)=>{
+await Promise.all([http('Baidu'),http('Bilibili'),http('Github'),http('Google'),http('Twitter')]).then((x)=>{
 	$done({
     title: 'Network Connectivity Test',
     content: x.join('\n'),
