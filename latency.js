@@ -12,7 +12,7 @@ const REQUEST_HEADERS = {
     'icon-color': '#FF5A9AF9',
   }
 
-  await Promise.all([test_Huawei(), test_youtube(), test_github(), test_twitch(), test_chatgpt()])
+  await Promise.all([test_Huawei(), test_youtube(), test_github(), test_chatgpt()])
     .then((result) => {
       let content = result.join('')
       panel_result['content'] = content
@@ -103,34 +103,7 @@ async function test_github() {
   
   return github_test_result
 }
-/////Twitch
-async function test_twitch() {
-  let inner_check = () => {
-    return new Promise((resolve) => {
-      let option = {
-        url: 'https://www.twitch.tv',
-        headers: REQUEST_HEADERS,
-      }
-      twitch_startTime = Date.now()
-      $httpClient.post(option, function (error, response, data) {
-        twitch_endTime = Date.now()
-        resolve('1')
-      })
-    })
-  }
-
-  twitch_test_result =  'Twitch'+':'
-  await inner_check()
-    .then((code) => {
-      twitch_Delay = twitch_endTime-twitch_startTime + ""
-      if (code === '1') {
-        twitch_test_result += twitch_Delay + 'ms' +'\xa0\xa0\xa0\xa0\t '
-      }
-    })
-  
-  return twitch_test_result
-}
-//////chatgpt
+/////chatgpt
 async function test_chatgpt() {
   let inner_check = () => {
     return new Promise((resolve) => {
@@ -146,7 +119,7 @@ async function test_chatgpt() {
     })
   }
 
-  chatgpt_test_result =  '\xa0\Chatgpt'+':'
+  chatgpt_test_result =  '\xa0\CHATGPT'+':'
   await inner_check()
     .then((code) => {
       chatgpt_Delay = chatgpt_endTime-chatgpt_startTime + ""
