@@ -97,7 +97,7 @@ async function test_github() {
     .then((code) => {
       github_Delay = github_endTime-github_startTime + ""
       if (code === '1') {
-        github_test_result += github_Delay + 'ms'
+        github_test_result += github_Delay + 'ms' +'\xa0\xa0\t'
       }
     })
   
@@ -119,7 +119,7 @@ async function test_twitch() {
     })
   }
 
-  twitch_test_result =  '\xa0\TCH'+':'
+  twitch_test_result =  'Twitch'+':'
   await inner_check()
     .then((code) => {
       twitch_Delay = twitch_endTime-twitch_startTime + ""
@@ -146,7 +146,7 @@ async function test_twitter() {
     })
   }
 
-  twitter_test_result =  '\xa0\TTR'+':'
+  twitter_test_result =  '\xa0\Twitter'+':'
   await inner_check()
     .then((code) => {
       twitter_Delay = twitter_endTime-twitter_startTime + ""
