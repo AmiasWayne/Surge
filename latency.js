@@ -12,7 +12,7 @@ const REQUEST_HEADERS = {
     'icon-color': '#FF5A9AF9',
   }
 
-  await Promise.all([test_Huawei(), test_youtube(), test_github(), test_chatgpt()])
+  await Promise.all([test_taobao(), test_youtube(), test_github(), test_chatgpt()])
     .then((result) => {
       let content = result.join('')
       panel_result['content'] = content
@@ -21,32 +21,32 @@ const REQUEST_HEADERS = {
       $done(panel_result)
     })
 })()
-///Huawei
-async function test_Huawei() {
+///taobao
+async function test_taobao() {
   let inner_check = () => {
     return new Promise((resolve) => {
       let option = {
-        url: 'http://connectivitycheck.platform.hicloud.com/generate_204',
+        url: 'www.taobao.com',
         headers: REQUEST_HEADERS,
       }
-      Huawei_startTime = Date.now()
+      taobao_startTime = Date.now()
       $httpClient.post(option, function (error, response, data) {
-        Huawei_endTime = Date.now()
+        taobao_endTime = Date.now()
         resolve('1')
       })
     })
   }
 
-  Huawei_test_result =  'HW'+':'
+  taobao_test_result =  'TB'+':'
   await inner_check()
     .then((code) => {
-      Huawei_Delay = Huawei_endTime-Huawei_startTime + ""
+      taobao_Delay = taobao_endTime-taobao_startTime + ""
       if (code === '1') {
-        Huawei_test_result += Huawei_Delay + 'ms'+'\xa0\|'
+        taobao_test_result += taobao_Delay + 'ms'+'\xa0\|'
       }
     })
   
-  return Huawei_test_result
+  return taobao_test_result
 }
 
 //keyyoutube
