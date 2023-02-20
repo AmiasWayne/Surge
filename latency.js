@@ -12,7 +12,7 @@ const REQUEST_HEADERS = {
     'icon-color': '#FF5A9AF9',
   }
 
-  await Promise.all([test_Huawei(), test_youtube(), test_github(), test_twitch(), test_facebook()])
+  await Promise.all([test_Huawei(), test_youtube(), test_github(), test_twitch(), test_chatgpt()])
     .then((result) => {
       let content = result.join('')
       panel_result['content'] = content
@@ -130,30 +130,30 @@ async function test_twitch() {
   
   return twitch_test_result
 }
-//////facebook
-async function test_facebook() {
+//////chatgpt
+async function test_chatgpt() {
   let inner_check = () => {
     return new Promise((resolve) => {
       let option = {
-        url: 'https://www.facebook.com',
+        url: 'https://www.openai.com',
         headers: REQUEST_HEADERS,
       }
-      facebook_startTime = Date.now()
+      chatgpt_startTime = Date.now()
       $httpClient.post(option, function (error, response, data) {
-        facebook_endTime = Date.now()
+        chatgpt_endTime = Date.now()
         resolve('1')
       })
     })
   }
 
-  facebook_test_result =  '\xa0\Facebook'+':'
+  chatgpt_test_result =  '\xa0\Chatgpt'+':'
   await inner_check()
     .then((code) => {
-      facebook_Delay = facebook_endTime-facebook_startTime + ""
+      chatgpt_Delay = chatgpt_endTime-chatgpt_startTime + ""
       if (code === '1') {
-        facebook_test_result += facebook_Delay + 'ms'
+        chatgpt_test_result += chatgpt_Delay + 'ms'
       }
     })
   
-  return facebook_test_result
+  return chatgpt_test_result
 }
