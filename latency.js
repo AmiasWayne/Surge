@@ -97,7 +97,7 @@ async function test_github() {
     .then((code) => {
       github_Delay = github_endTime-github_startTime + ""
       if (code === '1') {
-        github_test_result += github_Delay + 'ms' +'\xa0\xa0\t: '
+        github_test_result += github_Delay + 'ms' +'\xa0\xa0\t '
       }
     })
   
@@ -124,7 +124,7 @@ async function test_twitch() {
     .then((code) => {
       twitch_Delay = twitch_endTime-twitch_startTime + ""
       if (code === '1') {
-        twitch_test_result += twitch_Delay + 'ms'
+        twitch_test_result += twitch_Delay + 'ms' +'\xa0\xa0\t '
       }
     })
   
