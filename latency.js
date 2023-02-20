@@ -12,7 +12,7 @@ const REQUEST_HEADERS = {
     'icon-color': '#FF5A9AF9',
   }
 
-  await Promise.all([test_Huawei(), test_youtube(), test_github(), test_twitch(), test_twitter()])
+  await Promise.all([test_Huawei(), test_youtube(), test_github(), test_twitch(), test_facebook()])
     .then((result) => {
       let content = result.join('')
       panel_result['content'] = content
@@ -124,36 +124,36 @@ async function test_twitch() {
     .then((code) => {
       twitch_Delay = twitch_endTime-twitch_startTime + ""
       if (code === '1') {
-        twitch_test_result += twitch_Delay + 'ms' +'\xa0\xa0\t '
+        twitch_test_result += twitch_Delay + 'ms' +'\xa0\xa0\xa0\xa0\t '
       }
     })
   
   return twitch_test_result
 }
-//////twitter
-async function test_twitter() {
+//////facebook
+async function test_facebook() {
   let inner_check = () => {
     return new Promise((resolve) => {
       let option = {
-        url: 'https://www.twitter.com',
+        url: 'https://www.facebook.com',
         headers: REQUEST_HEADERS,
       }
-      twitter_startTime = Date.now()
+      facebook_startTime = Date.now()
       $httpClient.post(option, function (error, response, data) {
-        twitter_endTime = Date.now()
+        facebook_endTime = Date.now()
         resolve('1')
       })
     })
   }
 
-  twitter_test_result =  '\xa0\Twitter'+':'
+  facebook_test_result =  '\xa0\Facebook'+':'
   await inner_check()
     .then((code) => {
-      twitter_Delay = twitter_endTime-twitter_startTime + ""
+      facebook_Delay = facebook_endTime-facebook_startTime + ""
       if (code === '1') {
-        twitter_test_result += twitter_Delay + 'ms'
+        facebook_test_result += facebook_Delay + 'ms'
       }
     })
   
-  return twitter_test_result
+  return facebook_test_result
 }
