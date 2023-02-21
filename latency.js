@@ -22,7 +22,7 @@ const REQUEST_HEADERS = {
     })
 })()
 ///baidu
-async function test_taobao() {
+async function test_baidu() {
   let inner_check = () => {
     return new Promise((resolve) => {
       let option = {
