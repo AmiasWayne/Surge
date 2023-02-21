@@ -12,7 +12,7 @@ const REQUEST_HEADERS = {
     'icon-color': '#FF5A9AF9',
   }
 
-  await Promise.all([test_taobao(), test_youtube(), test_github(), test_chatgpt()])
+  await Promise.all([test_baidu(), test_youtube(), test_github(), test_chatgpt()])
     .then((result) => {
       let content = result.join('')
       panel_result['content'] = content
@@ -21,32 +21,32 @@ const REQUEST_HEADERS = {
       $done(panel_result)
     })
 })()
-///taobao
+///baidu
 async function test_taobao() {
   let inner_check = () => {
     return new Promise((resolve) => {
       let option = {
-        url: 'www.taobao.com',
+        url: 'www.baidu.com',
         headers: REQUEST_HEADERS,
       }
-      taobao_startTime = Date.now()
+      baidu_startTime = Date.now()
       $httpClient.post(option, function (error, response, data) {
-        taobao_endTime = Date.now()
+        baidu_endTime = Date.now()
         resolve('1')
       })
     })
   }
 
-  taobao_test_result =  'TB'+':'
+  baidu_test_result =  'BD'+':'
   await inner_check()
     .then((code) => {
-      taobao_Delay = taobao_endTime-taobao_startTime + ""
+      baidu_Delay = baidu_endTime-baidu_startTime + ""
       if (code === '1') {
-        taobao_test_result += taobao_Delay + 'ms'+'\xa0\|'
+        baidu_test_result += baidu_Delay + 'ms'+'\xa0\|'
       }
     })
   
-  return taobao_test_result
+  return baidu_test_result
 }
 
 //keyyoutube
