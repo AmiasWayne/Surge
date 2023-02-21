@@ -26,7 +26,7 @@ async function test_baidu() {
   let inner_check = () => {
     return new Promise((resolve) => {
       let option = {
-        url: 'www.baidu.com',
+        url: 'http://www.baidu.com',
         headers: REQUEST_HEADERS,
       }
       baidu_startTime = Date.now()
