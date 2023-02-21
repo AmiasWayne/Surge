@@ -1,2 +1,2 @@
 # Surge
-PersonalSetting for myself only。
+PersonalSetting for myself only.
