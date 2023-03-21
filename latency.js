@@ -49,7 +49,7 @@ async function test_baidu() {
   return baidu_test_result
 }
 
-//keyyoutube
+//youtube
 async function test_youtube() {
   let inner_check = () => {
     return new Promise((resolve) => {
@@ -108,7 +108,7 @@ async function test_chatgpt() {
   let inner_check = () => {
     return new Promise((resolve) => {
       let option = {
-        url: 'https://openai.com',
+        url: 'https://www.gstatic.com/generate_204',
         headers: REQUEST_HEADERS,
       }
       chatgpt_startTime = Date.now()
