@@ -1,5 +1,5 @@
 host-suffix, flightradar24.com
-host, xp.apple.com
+#host, xp.apple.com
 host-suffix, tenor.com
 host-suffix, isagood.day
 host-keyword, prpr
