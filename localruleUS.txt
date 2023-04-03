@@ -1,0 +1,3 @@
+#host-suffix, flightradar24.com
+#host, xp.apple.com
+#host-keyword, prpr
