@@ -3,3 +3,4 @@ host-suffix, tenor.com
 host-suffix, isagood.day
 host-keyword, prpr
 host-suffix, texon.io
+host-suffix, windy.com
